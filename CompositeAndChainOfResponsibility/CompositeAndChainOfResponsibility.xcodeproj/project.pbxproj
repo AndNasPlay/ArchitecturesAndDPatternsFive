@@ -12,6 +12,7 @@
 		1614E6042751205200DB4727 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614E6032751205200DB4727 /* MainViewController.swift */; };
 		1614E6092751205700DB4727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1614E6082751205700DB4727 /* Assets.xcassets */; };
 		1614E60C2751205700DB4727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1614E60A2751205700DB4727 /* LaunchScreen.storyboard */; };
+		1614E6152751264100DB4727 /* MainUItableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614E6142751264100DB4727 /* MainUItableTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1614E6082751205700DB4727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1614E60B2751205700DB4727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1614E60D2751205700DB4727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1614E6142751264100DB4727 /* MainUItableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUItableTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				1614E5FF2751205200DB4727 /* AppDelegate.swift */,
 				1614E6012751205200DB4727 /* SceneDelegate.swift */,
 				1614E6032751205200DB4727 /* MainViewController.swift */,
+				1614E6142751264100DB4727 /* MainUItableTableViewController.swift */,
 				1614E6082751205700DB4727 /* Assets.xcassets */,
 				1614E60A2751205700DB4727 /* LaunchScreen.storyboard */,
 				1614E60D2751205700DB4727 /* Info.plist */,
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1614E6042751205200DB4727 /* MainViewController.swift in Sources */,
+				1614E6152751264100DB4727 /* MainUItableTableViewController.swift in Sources */,
 				1614E6002751205200DB4727 /* AppDelegate.swift in Sources */,
 				1614E6022751205200DB4727 /* SceneDelegate.swift in Sources */,
 			);
