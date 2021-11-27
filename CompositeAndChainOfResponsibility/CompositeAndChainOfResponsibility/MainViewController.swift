@@ -92,6 +92,7 @@ class MainViewController: UIViewController {
 	}
 
 	@objc func handleChainButtonTouchUpInseide() {
-
+		self.navigationController?.pushViewController(
+			ChainOfResponsibilityViewController(), animated: true)
 	}
 }

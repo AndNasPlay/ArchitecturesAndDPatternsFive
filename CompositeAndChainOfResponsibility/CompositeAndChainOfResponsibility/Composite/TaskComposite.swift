@@ -7,24 +7,24 @@
 
 import Foundation
 
-protocol Compose {
+protocol TaskCompose {
 	var name: String { get set }
-	func addTask(task: Compose)
+	func addTask(task: TaskCompose)
 	func taskCount() -> Int
-	func showTasks() -> [Compose]
+	func showTasks() -> [TaskCompose]
 }
 
-class Task: Compose {
+class Task: TaskCompose {
 
 	var name: String
 
-	private var tasksArray = [Compose]()
+	private var tasksArray = [TaskCompose]()
 
 	init(name: String) {
 		self.name = name
 	}
 
-	func addTask(task: Compose) {
+	func addTask(task: TaskCompose) {
 		tasksArray.append(task)
 	}
 
@@ -32,7 +32,7 @@ class Task: Compose {
 		tasksArray.count
 	}
 
-	func showTasks() -> [Compose] {
+	func showTasks() -> [TaskCompose] {
 		return tasksArray
 	}
 

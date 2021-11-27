@@ -11,7 +11,7 @@ class MainUItableTableViewController: UITableViewController, UINavigationControl
 
 	let reuseIdentifier = "reuseIdentifier"
 
-	private var arrOfTask: Compose = Task(name: "Main")
+	private var arrOfTask: TaskCompose = Task(name: "Main")
 
 	private(set) lazy var addButton = UIBarButtonItem(barButtonSystemItem: .add,
 									target: self,
@@ -37,7 +37,6 @@ class MainUItableTableViewController: UITableViewController, UINavigationControl
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
 		return arrOfTask.taskCount()
     }
 
