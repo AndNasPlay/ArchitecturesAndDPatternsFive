@@ -87,7 +87,8 @@ class MainViewController: UIViewController {
 	}
 
 	@objc func handleCompositeButtonTouchUpInseide() {
-		self.navigationController?.pushViewController(MainUItableTableViewController(), animated: true)
+		self.navigationController?.pushViewController(
+			MainUItableTableViewController(), animated: true)
 	}
 
 	@objc func handleChainButtonTouchUpInseide() {
