@@ -11,9 +11,9 @@ class MainViewController: UIViewController {
 
 	private let buttonsStackViewLeadingTrailing: CGFloat = 60.0
 
-	private let buttonsStackViewHeightAnchor: CGFloat = 100.0
+	private let buttonsStackViewHeightAnchor: CGFloat = 200.0
 
-	private let buttonsCornerRadiusAndSpacing: CGFloat = 20.0
+	private let buttonsCornerRadiusAndSpacing: CGFloat = 40.0
 
 	private(set) lazy var compositeButton: UIButton = {
 		var button = UIButton()
@@ -21,8 +21,8 @@ class MainViewController: UIViewController {
 		button.setTitle("Composite", for: .normal)
 		button.setTitleColor(.black, for: .normal)
 		button.setTitleColor(.white, for: .highlighted)
-		button.titleLabel?.font = UIFont.systemFont(ofSize: 17.0, weight: .semibold)
-		button.backgroundColor = .brown
+		button.titleLabel?.font = UIFont.systemFont(ofSize: 20.0, weight: .light)
+		button.backgroundColor = .lightGray
 		button.layer.cornerRadius = buttonsCornerRadiusAndSpacing
 		return button
 	}()
@@ -33,8 +33,8 @@ class MainViewController: UIViewController {
 		button.setTitle("Chain of responsibility", for: .normal)
 		button.setTitleColor(.black, for: .normal)
 		button.setTitleColor(.white, for: .highlighted)
-		button.titleLabel?.font = UIFont.systemFont(ofSize: 17.0, weight: .semibold)
-		button.backgroundColor = .brown
+		button.titleLabel?.font = UIFont.systemFont(ofSize: 20.0, weight: .light)
+		button.backgroundColor = .lightGray
 		button.layer.cornerRadius = buttonsCornerRadiusAndSpacing
 		return button
 	}()

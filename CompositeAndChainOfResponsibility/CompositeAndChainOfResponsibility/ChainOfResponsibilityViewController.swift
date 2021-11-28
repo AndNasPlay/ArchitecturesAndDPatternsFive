@@ -15,10 +15,24 @@ class ChainOfResponsibilityViewController: UIViewController {
 
 	private let stackViewSpacing: CGFloat = 20.0
 
+	private var downloadManager = DownloadManager()
+
+	private let fileOne: String = "1"
+
+	private let secondFile: String = "2"
+
+	private let thirdFile: String = "3"
+
+	private var arrOfPersonFromData: [Person] = [Person]()
+
+	private var arrOfPersonFromResult: [Person] = [Person]()
+
+	private var arrOfPerson: [Person] = [Person]()
+
 	private(set) lazy var firstParserUIView: UILabel = {
 		var view = UILabel()
 		view.translatesAutoresizingMaskIntoConstraints = false
-		view.backgroundColor = .brown
+		view.backgroundColor = .lightGray
 		view.textAlignment = .center
 		view.text = "Первый"
 		return view
@@ -27,7 +41,7 @@ class ChainOfResponsibilityViewController: UIViewController {
 	private(set) lazy var secondParserUIView: UILabel = {
 		var view = UILabel()
 		view.translatesAutoresizingMaskIntoConstraints = false
-		view.backgroundColor = .brown
+		view.backgroundColor = .lightGray
 		view.textAlignment = .center
 		view.text = "Второй"
 		return view
@@ -36,7 +50,7 @@ class ChainOfResponsibilityViewController: UIViewController {
 	private(set) lazy var thirdParserUIView: UILabel = {
 		var view = UILabel()
 		view.translatesAutoresizingMaskIntoConstraints = false
-		view.backgroundColor = .brown
+		view.backgroundColor = .lightGray
 		view.textAlignment = .center
 		view.text = "Третий"
 		return view
@@ -96,6 +110,45 @@ class ChainOfResponsibilityViewController: UIViewController {
 	}
 
 	@objc func handleParsingButtonTouchUpInseide() {
-		print(1)
+
+		arrOfPersonFromData = downloadManager.getPerson(from: fileOne) ?? [Person(
+																			name: "Ошибка",
+																			age: 1,
+																			isDeveloper: true)]
+
+		arrOfPersonFromResult = downloadManager.getPerson(from: secondFile) ?? [Person(
+																					name: "Ошибка",
+																					age: 1,
+																					isDeveloper: true)]
+
+		arrOfPerson = downloadManager.getPerson(from: thirdFile) ?? [Person(
+																		name: "Ошибка",
+																		age: 1,
+																		isDeveloper: true)]
+
+		if arrOfPersonFromData.count == 3 {
+			firstParserUIView.backgroundColor = .green
+			firstParserUIView.text = arrOfPersonFromData.first?.name
+		} else {
+			firstParserUIView.backgroundColor = .red
+			firstParserUIView.text = "ошибка"
+		}
+
+		if arrOfPersonFromResult.count == 3 {
+			secondParserUIView.backgroundColor = .green
+			secondParserUIView.text = arrOfPersonFromResult[1].name
+		} else {
+			secondParserUIView.backgroundColor = .red
+			secondParserUIView.text = "ошибка"
+		}
+
+		if arrOfPerson.count == 3 {
+			thirdParserUIView.backgroundColor = .green
+			thirdParserUIView.text = arrOfPerson[2].name
+		} else {
+			thirdParserUIView.backgroundColor = .red
+			thirdParserUIView.text = "ошибка"
+		}
+
 	}
 }
